@@ -1,7 +1,4 @@
-
-
-
-
+// Readable Streams
 // var http = require ('http');
 
 // var server = http.createServer(function(req, res){
@@ -26,27 +23,7 @@
 // })
 
 // server.listen(3000, '127.0.0.1');
-// console.log('you are finally connected at port 3000')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log('you are finally connected at port
 
 
 
