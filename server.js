@@ -1,18 +1,15 @@
 
+var http = require ('http');
 
+var server = http.createServer(function(req, res){
+    req.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Welcome Sonia');
 
+});
 
-// var http = require ('http');
+server.listen(3000, '127.0.0.1');
 
-// var server = http.createServer(function(req, res){
-//     req.writeHead(200, {'Content-Type': 'text/plain'});
-//     res.end('Welcome Sonia');
-
-// });
-
-// server.listen(3000, '127.0.0.1');
-
-// console.log('you are connected to the server at port 3000');
+console.log('you are connected to the server at port 3000');
 
 
 
