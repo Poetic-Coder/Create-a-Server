@@ -1,9 +1,14 @@
-
 var http = require ('http');
+var fs = require('fs');
+
 
 var server = http.createServer(function(req, res){
-    req.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Welcome Sonia');
+    console.log('request was made:' + req.url);
+
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    var myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
+
+    myReadStream.pipe(res);
 
 });
 
@@ -13,17 +18,6 @@ console.log('you are connected to the server at port 3000');
 
 
 
-
-
-// var http = require('http');
-
-// var server = http.createServer(function(req, res){
-//     req.writeHead(200, {'Content-Type' : 'text/plain'});
-//     res.end('you are welcome, s');
-// })
-
-// server.listen(3000, '127.0.0.1');
-// console.log('you are finally connected at port 3000')
 
 
 
